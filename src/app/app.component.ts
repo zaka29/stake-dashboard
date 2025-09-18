@@ -16,6 +16,7 @@ export class AppComponent {
       search: 'assets/icons/search.svg',
       'square-dollar': 'assets/icons/square-dollar.svg',
       target: '/assets/icons/target.svg',
+      fig: 'assets/icons/FIG.svg',
     });
   }
 }

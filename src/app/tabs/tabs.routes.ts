@@ -3,7 +3,7 @@ import { TabsPage } from './tabs.page';
 
 export const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'stake',
     component: TabsPage,
     children: [
       {
@@ -18,7 +18,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/invest',
+    redirectTo: '/stake/invest',
     pathMatch: 'full',
   },
 ];

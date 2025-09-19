@@ -1,0 +1,21 @@
+<div
+  #track
+  class="relative flex items-center justify-center h-12 w-full bg-dark rounded-full overflow-hidden select-none"
+  (touchstart)="startDrag($event)"
+  (mousedown)="startDrag($event)"
+>
+  <!-- sliding knob -->
+  <div
+    #knob
+    class="absolute left-0 top-0 h-12 w-12 bg-white rounded-full flex items-center justify-center shadow
+           touch-none will-change-transform"
+    [style.transform]="'translateX(' + knobX + 'px)'"
+  >
+    <ion-icon class="text-5xl" name="buy-chevrons"></ion-icon>
+  </div>
+
+  <span class="text-white font-semibold pointer-events-none">
+    Swipe to buy
+  </span>
+</div>
+

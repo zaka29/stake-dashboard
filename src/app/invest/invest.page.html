@@ -12,11 +12,24 @@
 
 <!-- Slide out card container -->
 <ion-card class="absolute flex flex-col left-0 right-0 bottom-0 translate-y-[100vh] min-h-44 shadow-none rounded-2xl" #card>
-  <div class="flex-1 p-2">
-    Card
+  <div class="p-4 pb-0">
+    <h1 class="text-2xl">GOOG $109.89</h1>
+  </div>
+  <div class="flex flex-1 flex-col gap-2 p-4">
+    <div class="border border-medium rounded-md p-2 px-3 pb-0">
+      <span class="text-sm text-medium-tint">Price</span>
+      <ion-input value="At market"></ion-input>
+    </div>
+    <div class="border border-medium rounded-md p-2 px-3 pb-0">
+      <span class="text-sm text-medium-tint">Amount</span>
+      <ion-input value="5"></ion-input>
+    </div>
+    <div class="border border-medium rounded-md p-2 px-3 pb-0">
+      <span class="text-sm text-medium-tint">Shares</span>
+      <ion-input value="5,000"></ion-input>
+    </div>
   </div>
   <div class="p-2">
-<!--    <ion-button (click)="toggleCard()" class="w-full">Swipe to buy</ion-button>-->
     <app-swipe-to-confirm (confirmed)="placeOrder()" ></app-swipe-to-confirm>
   </div>
 </ion-card>

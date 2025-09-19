@@ -16,6 +16,7 @@
     Card
   </div>
   <div class="p-2">
-    <ion-button (click)="toggleCard()" class="w-full">Swipe to buy</ion-button>
+<!--    <ion-button (click)="toggleCard()" class="w-full">Swipe to buy</ion-button>-->
+    <app-swipe-to-confirm (confirmed)="placeOrder()" ></app-swipe-to-confirm>
   </div>
 </ion-card>

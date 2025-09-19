@@ -11,6 +11,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import { HoldingsComponent } from '../components/holdings/holdings.component';
+import { SwipeToConfirmComponent } from '../components/swipe-to-confirm/swipe-to-confirm.component';
 import { TotalEquityComponent } from '../components/total-equity/total-equity.component';
 import { TrendingStockComponent } from '../components/trending-stock/trending-stock.component';
 
@@ -29,6 +30,7 @@ import { TrendingStockComponent } from '../components/trending-stock/trending-st
     TotalEquityComponent,
     HoldingsComponent,
     TrendingStockComponent,
+    SwipeToConfirmComponent,
     IonCard,
     IonButton,
   ],
@@ -58,5 +60,11 @@ export class InvestPage implements AfterViewInit {
       this.animation.direction('normal').play();
     }
     this.cardVisible = !this.cardVisible;
+  }
+
+  placeOrder() {
+    // your buy order logic
+    console.log('Order confirmed!');
+    this.toggleCard(); // optionally hide the card
   }
 }

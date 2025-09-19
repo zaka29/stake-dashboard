@@ -54,13 +54,11 @@ export class SwipeToConfirmComponent {
     this.dragging = false;
 
     if (this.knobX >= this.maxX * 0.9) {
-      // reached the end → confirm
       this.confirmed.emit();
       setTimeout(() => {
         this.knobX = 0;
       }, 200);
     } else {
-      // snap back
       this.knobX = 0;
     }
   }

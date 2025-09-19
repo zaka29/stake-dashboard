@@ -1,12 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  ViewChild,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Animation, AnimationController } from '@ionic/angular';
 import {
-  IonButton,
   IonCard,
   IonContent,
   IonHeader,
+  IonInput,
   IonTitle,
   IonToolbar,
 } from '@ionic/angular/standalone';
@@ -32,7 +39,7 @@ import { TrendingStockComponent } from '../components/trending-stock/trending-st
     TrendingStockComponent,
     SwipeToConfirmComponent,
     IonCard,
-    IonButton,
+    IonInput,
   ],
 })
 export class InvestPage implements AfterViewInit {
@@ -63,8 +70,17 @@ export class InvestPage implements AfterViewInit {
   }
 
   placeOrder() {
-    // your buy order logic
     console.log('Order confirmed!');
-    this.toggleCard(); // optionally hide the card
+    this.toggleCard();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.cardVisible) return;
+
+    const target = event.target as HTMLElement;
+    const cardEl = this.card?.nativeElement;
+    if (cardEl && !cardEl.contains(target)) {
+    }
   }
 }

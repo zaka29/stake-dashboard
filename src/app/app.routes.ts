@@ -7,10 +7,10 @@ export const routes: Routes = [
   },
   {
     path: 'invest',
-    loadComponent: () => import('./invest/invest.page').then((m) => m.InvestPage),
+    loadComponent: () => import('./tabs/invest/invest.page').then((m) => m.InvestPage),
   },
   {
     path: 'discover',
-    loadComponent: () => import('./discover/discover.page').then((m) => m.DiscoverPage),
+    loadComponent: () => import('./tabs/discover/discover.page').then((m) => m.DiscoverPage),
   },
 ];

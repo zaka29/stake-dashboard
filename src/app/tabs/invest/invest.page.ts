@@ -17,10 +17,10 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/angular/standalone';
-import { HoldingsComponent } from '../components/holdings/holdings.component';
-import { SwipeToConfirmComponent } from '../components/swipe-to-confirm/swipe-to-confirm.component';
-import { TotalEquityComponent } from '../components/total-equity/total-equity.component';
-import { TrendingStockComponent } from '../components/trending-stock/trending-stock.component';
+import { HoldingsComponent } from '../../components/holdings/holdings.component';
+import { SwipeToConfirmComponent } from '../../components/swipe-to-confirm/swipe-to-confirm.component';
+import { TotalEquityComponent } from '../../components/total-equity/total-equity.component';
+import { TrendingStockComponent } from '../../components/trending-stock/trending-stock.component';
 
 @Component({
   selector: 'app-invest',

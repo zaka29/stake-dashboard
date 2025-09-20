@@ -30,7 +30,7 @@ export class SwipeToConfirmComponent {
 
     this.dragging = true;
     this.startX = clientX - this.knobX;
-    this.maxX = this.track.nativeElement.offsetWidth - 48; // 48 = knob width
+    this.maxX = this.track.nativeElement.offsetWidth - 48;
     e.preventDefault();
   }
 

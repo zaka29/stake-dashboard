@@ -80,7 +80,9 @@ export class InvestPage implements AfterViewInit {
 
     const target = event.target as HTMLElement;
     const cardEl = this.card?.nativeElement;
-    if (cardEl && !cardEl.contains(target)) {
+    if (cardEl && !cardEl.contains(target) && !this.animation.isRunning()) {
+      this.animation.direction('reverse').play();
+      this.cardVisible = false;
     }
   }
 }
